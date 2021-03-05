@@ -1,0 +1,264 @@
+/* Первое задание в практической по css */
+
+/* Для всех абзацев после h1 */
+/* h1+p {
+    font-size: 20px;
+} */
+
+/* Для code который непосредственно внутри p */
+/* p>code {
+    color: red;
+} */
+
+/* Для всех code после p */
+/* p~code {
+    color: pink;
+} */
+
+
+
+/* Второе задание в практической по css */
+
+@font-face 
+{
+    font-family: 'Bad Script';
+    src: url('../fonts/BadScript-Regular.ttf');
+}
+
+* 
+{
+    margin: 0;
+    font-family: 'Bad Script', cursive;
+}
+
+html 
+{
+    scroll-behavior: smooth;
+}
+
+.all-page 
+{
+    width: 95%;
+    margin: auto;
+}
+
+/* HEADER */
+
+header 
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+header>div, footer 
+{
+    background-color: rgb(42, 42, 42);
+    color: white;
+}
+
+.logo 
+{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.logo img 
+{
+    width: 40px;
+    margin: 5px;
+    /* object-fit: cover; */
+}
+
+.contacts, .sidebar 
+{
+    box-sizing: border-box;
+    width: 25%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* MAIN */
+
+main 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 5%;
+}
+
+.contacts 
+{
+    align-items: center;
+}
+
+.sidebar 
+{
+    padding: 10px 20px;
+    padding-bottom: 20px;
+    align-items: flex-start;
+}
+
+.content-block 
+{
+    width: 60%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.content-block, .sidebar 
+{
+    background-color: rgb(239 241, 234);
+    border: 2px solid rgb(182, 179, 179);
+}
+
+/* Button */
+
+.btnBeauty
+{
+    margin: 1% 1% 1% 0;
+    width: 15%;
+    padding: 40px;
+    /* padding-bottom: 20px; */
+    background: #001a2b;
+    /* text-align: center; */
+}
+
+.btnBeauty a
+{
+    position: absolute;
+    /* top: 10%; */
+    left: 12%;
+    transform: translate(-50%,-50%);
+    color: #1670f0;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+    font-size: 30px;
+    overflow: hidden;
+}
+
+.btnBeauty a:before
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.btnBeauty a span:nth-child(1)
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #5cf181, #1ca301);
+
+    animation: key1 2s linear infinite;
+    animation-delay: 1s;
+}
+
+.btnBeauty a span:nth-child(2)
+{
+    position: absolute;
+    top:0;
+    left:98%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #1ca301, #012c00);
+
+    animation: key2 2s linear infinite;
+}
+
+.btnBeauty a span:nth-child(3)
+{
+    position: absolute;
+    top: 95%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, #023a00, #1ca301);
+
+    animation: key3 2s linear infinite;
+    animation-delay: 1s;
+}
+
+.btnBeauty a span:nth-child(4)
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top, #1ca301, #5cf181);
+
+    animation: key4 2s linear infinite;
+}
+
+/* Start animation */
+@keyframes key1
+{
+    0%
+    {
+        transform: translateX(-100%);
+    }
+    100%
+    {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes key2
+{
+    0%
+    {
+        transform: translateY(-100%);
+    }
+    100%
+    {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes key3
+{
+    0%
+    {
+        transform: translateX(100%);
+    }
+    100%
+    {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes key4
+{
+    0%
+    {
+        transform: translateY(100%);
+    }
+    100%
+    {
+        transform: translateY(-100%);
+    }
+}
+
+/* FOOTER */
+
+footer 
+{
+    flex-basis: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 30px;
+}
